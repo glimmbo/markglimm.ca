@@ -7,25 +7,19 @@
   const arrowNav = e => {
     if (segment === undefined) {
       if (e.key === "ArrowRight") {
-        goto("experiments");
-      }
-    } else if (segment === "experiments") {
-      if (e.key === "ArrowRight") {
         goto("about");
-      } else if (e.key === "ArrowLeft") {
-        goto(".");
       }
     } else if (segment === "about") {
       if (e.key === "ArrowRight") {
         goto("contact");
       } else if (e.key === "ArrowLeft") {
-        goto("experiments");
-      }    
+        goto(".");
+      }
     } else if (segment === "contact") {
-			if (e.key === "ArrowLeft") {
+      if (e.key === "ArrowLeft") {
         goto("about");
       }
-		}
+    }
   };
 </script>
 
@@ -37,6 +31,9 @@
   }
 
   ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin: 0;
     padding: 0;
   }
@@ -80,23 +77,18 @@
 <nav>
   <ul>
     <li>
-      <a class={segment === undefined ? 'selected' : ''} href=".">home</a>
-    </li>
-    <li>
-      <a class={segment === 'experiments' ? 'selected' : ''} href="experiments">
+      <a class={segment === undefined ? 'selected' : ''} href=".">
         experiments
       </a>
     </li>
     <li>
-      <a class={segment === 'about' ? 'selected' : ''} href="about">about</a>
+      <a class={segment === 'about' ? 'selected' : ''} href="about">
+        about
+      </a>
     </li>
     <li>
       <a class={segment === 'contact' ? 'selected' : ''} href="contact">
         contact
       </a>
-    </li>
-    <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-    <!-- <li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a></li> -->
   </ul>
 </nav>

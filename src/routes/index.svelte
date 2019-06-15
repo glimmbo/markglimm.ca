@@ -1,15 +1,26 @@
+<script>
+</script>
+
+<style>
+  section {
+    margin: 0;
+  }
+</style>
+
 <svelte:head>
   <title>Dev Mark Glimm</title>
 </svelte:head>
 
-<script>
-	import { fly } from 'svelte/transition';
-	import { onMount } from 'svelte';
-</script>
+<section>
+  <h1>The Lab</h1>
+  <p>
+    I like to tinker.
+    <br />
+    You know: experiment, break things, Google a fix, find something better,
+    repeat.
+  </p>
 
-<h1 transition:fly="{{ x: 200, duration: 200 }}">Great success!</h1>
-
-<p transition:fly="{{ x: 200, duration: 200 }}">
-  <strong>I'm a developer.</strong>
-</p>
-
+  <div id="grid">
+    
+  </div>
+</section>
