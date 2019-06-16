@@ -25,6 +25,12 @@ module.exports = {
 							hotReload: false // pending https://github.com/sveltejs/svelte/issues/2377
 						}
 					}
+				},
+				{
+					test: /\.svg$/,
+					use: {
+						loader: 'svg-inline-loader'
+					}
 				}
 			]
 		},
@@ -57,6 +63,12 @@ module.exports = {
 							generate: 'ssr',
 							dev
 						}
+					}
+				},
+				{
+					test: /\.svg$/,
+					use: {
+						loader: 'svg-inline-loader'
 					}
 				}
 			]
