@@ -1,84 +1,37 @@
 <script>
-
+  import Project from "../components/Project.svelte";
 </script>
 
 <style>
-  section {
-    height: 60vh;
-    margin: 0;
-  }
 
-  .grid {
-    background-color: black;
-    display: grid;
-    grid-gap: .5em;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: repeat(5, 1fr);
-    height: 100%;
-  }
-
-  .grid-item {
-    align-items: center;
-    background-color: red;
-    display: flex;
-    justify-content: center;
-  }
-
-  .vegex {
-    grid-row: span 3;
-    grid-column: span 2;
-  }
-
-  .tagg {
-    grid-row: span 2;
-    grid-column: span 3;
-  }
-
-  .ar-puzzle {
-    grid-row: span 1;
-    grid-column: span 1;
-  }
-
-  .c3-solutions {
-    grid-row: span 2;
-    grid-column: span 2;
-  }
-
-  .banners {
-    grid-row: span 1;
-    grid-column: span 3;
-  }
-
-  .nodebot {
-    grid-row: span 2;
-    grid-column: span 1;
-  }
 </style>
 
 <svelte:head>
-  <title>Dev Mark Glimm</title>
+  <title>Mark Glimm, Web Developer etc.</title>
 </svelte:head>
 
 <section>
-  <h1>The Lab</h1>
-  <p>
-    I like to tinker.
-    <br />
-    You know: experiment, break things, Google a fix, find something better,
-    repeat.
-    <br />
-    Here's a few of such experiments I've done for the web.
-  </p>
 
-  <div class="grid">
-    <div class="grid-item vegex">vegex</div>
-    <div class="grid-item tagg">tagg</div>
-    <div class="grid-item ar-puzzle">ar puzzle</div>
-    <div class="grid-item ar-puzzle">ar puzzle</div>
-    <div class="grid-item nodebot">nodebot</div>
-    <div class="grid-item c3-solutions">c3-solutions</div>
-    <div class="grid-item ar-puzzle">ar puzzle</div>
-    <div class="grid-item ar-puzzle">ar puzzle</div>
-    <div class="grid-item banners">banner ads</div>
-  </div>
+  <Project
+    title="C3 Solutions"
+    url="https://github.com/c3-solutions"
+    img="/512-cube.png"
+    description="A group project spearheaded by myself and members of my cohort, aimed at bringing
+          alumni of CodeCore together to build applications for non-profit /
+          charitable organizations."
+  />
+  <Project
+    title="Love is in the Air"
+    url="https://liita.markglimm.ca"
+    img="/dance.png"
+    description="Landing page for my aerial photography hobby business."
+  />
+
+  <Project
+    title="Advertisements"
+    url="https://glimmbo.github.io/richmondAds/"
+    img="/richmond.jpg"
+    description="Animated banner ads, a small part of an advertisement campaign for the city of
+    Richmond, BC." />
+
 </section>

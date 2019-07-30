@@ -1,31 +1,39 @@
 <script>
   export let segment;
-  // segment is the slug, not sure where defined...
-  // $: console.log(segment)
   import { goto } from "@sapper/app";
+  import { tweened } from "svelte/motion";
+  import { cubicOut } from "svelte/easing"
 
   const arrowNav = e => {
     if (segment === undefined) {
       if (e.key === "ArrowRight") {
-        goto("about");
+        goto("experiments");
       }
-    } else if (segment === "about") {
+    } else if (segment === "experiments") {
       if (e.key === "ArrowRight") {
-        goto("contact");
+        goto("me");
       } else if (e.key === "ArrowLeft") {
         goto(".");
       }
-    } else if (segment === "contact") {
+    } else if (segment === "me") {
       if (e.key === "ArrowLeft") {
-        goto("about");
+        goto("experiments");
       }
     }
   };
+
+  const placement = tweened(0, {
+    duration: 400,
+    easing: cubicOut
+  });
+
 </script>
 
 <style>
   nav {
+    background-color: black;
     border-bottom: 1px solid rgba(255, 62, 0, 0.1);
+    color: white;
     font-weight: 300;
     padding: 0 1em;
   }
@@ -60,9 +68,10 @@
     content: "";
     width: calc(100% - 1em);
     height: 2px;
-    background-color: rgb(255, 62, 0);
+    background-color: red;
     display: block;
     bottom: -1px;
+    /* transition: position ease-out 1s; doesn't work, needs values to transition */
   }
 
   a {
@@ -75,20 +84,22 @@
 <svelte:window on:keydown={arrowNav} />
 
 <nav>
+
   <ul>
     <li>
       <a class={segment === undefined ? 'selected' : ''} href=".">
+        projects
+      </a>
+    </li>
+    <li>
+      <a class={segment === 'experiments' ? 'selected' : ''} href="experiments">
         experiments
       </a>
     </li>
     <li>
-      <a class={segment === 'about' ? 'selected' : ''} href="about">
-        about
+      <a class={segment === 'me' ? 'selected' : ''} href="me">
+        me
       </a>
     </li>
-    <li>
-      <a class={segment === 'contact' ? 'selected' : ''} href="contact">
-        contact
-      </a>
   </ul>
 </nav>
