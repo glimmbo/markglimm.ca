@@ -10,6 +10,7 @@
 
   .grid {
     background-color: black;
+    border: 3px red solid;
     display: grid;
     grid-gap: 0.2em;
     grid-template-rows: repeat(5, 1fr);
@@ -19,7 +20,7 @@
 
   .grid-item {
     align-items: center;
-    background-color: red;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,13 +31,14 @@
     color: white;
   }
 
-  .grid-item h2 {
+  .grid-item h3 {
     margin: 0;
   }
   .grid-item p {
   }
 
   .fivetones {
+    background: center / contain no-repeat url('/fivetones.png');
     grid-row: span 3;
     grid-column: span 2;
   }
@@ -69,6 +71,10 @@
   a {
     text-decoration: none;
   }
+
+  a:hover {
+    background-color: rba(255, 0, 0, .5);
+  }
 </style>
 
 <svelte:head>
@@ -76,20 +82,11 @@
 </svelte:head>
 
 <section>
-  <h1>The Lab</h1>
-  <p>
-    I like to tinker.
-    <br />
-    You know: experiment, break things, Google a fix, find something better,
-    repeat.
-    <br />
-    Here's a few of such experiments I've got cooking for the web.
-  </p>
 
   <div class="grid">
     <div class="grid-item fivetones">
-      <a href="#">
-        <h2>fivetones</h2>
+      <a href="https://github.com/glimmbo/third-kind">
+        <h3>fivetones</h3>
         <p>
           A mobile web, multiplayer sequence puzzle that unlocks an AR
           experience.
@@ -99,7 +96,7 @@
 
     <div class="grid-item vegex">
       <a href="#">
-        <h2>Vegex</h2>
+        <h3>Vegex</h3>
         <p>
           My bootcamp final project that connects gardeners and small farmers
           together to trade their produce. Work in progress. Currently migrating
@@ -111,7 +108,7 @@
     <div class="grid-item middlesShort">middlesShort</div>
 
     <div class="grid-item nodebot">
-      <h2>nodeBot</h2>
+      <h3>nodeBot</h3>
       <p>
         I found an unused Rasberry Pi in my roomate's closet. I installed node
         on it to serve as...something useful I'm sure.
@@ -119,11 +116,13 @@
     </div>
 
     <div class="grid-item foundry">
-      <h2>Foundry VTT</h2>
-      <p>
-        I play D&D with 5 friends every Sunday. We use a new, open-source
-        application that allows the development of custom modules.
-      </p>
+      <a href="https://github.com/death-save/fvtt-modules">
+        <h3>Foundry VTT</h3>
+        <p>
+          I play D&D with 5 friends every Sunday 🤓. We use a new, open-source
+          application that allows the development of custom modules.
+        </p>
+      </a>
     </div>
 
     <div class="grid-item ar-puzzle">ar puzzle</div>

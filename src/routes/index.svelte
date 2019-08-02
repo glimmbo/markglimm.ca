@@ -3,7 +3,9 @@
 </script>
 
 <style>
-
+  section {
+    border: 3px red solid;
+  }
 </style>
 
 <svelte:head>
