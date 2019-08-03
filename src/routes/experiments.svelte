@@ -9,7 +9,7 @@
   }
 
   .grid {
-    background-color: black;
+    background-color: red;
     border: 3px red solid;
     display: grid;
     grid-gap: 0.2em;
@@ -20,7 +20,7 @@
 
   .grid-item {
     align-items: center;
-    background-color: white;
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,7 +38,7 @@
   }
 
   .fivetones {
-    background: center / contain no-repeat url('/fivetones.png');
+    background: center / cover no-repeat url('/fivetones.png');
     grid-row: span 3;
     grid-column: span 2;
   }
@@ -48,15 +48,18 @@
     grid-column: span 3;
   }
 
-  .ar-puzzle {
+  .small {
+    font-family: "Press Start 2P", sans-serif;
   }
 
   .foundry {
+    background: center / cover no-repeat url('d&d.png');
     grid-row: span 2;
     grid-column: span 2;
   }
 
   .bottomRight {
+    font-family: "Press Start 2P", sans-serif;
     grid-column: span 3;
   }
 
@@ -65,6 +68,7 @@
   }
 
   .middlesShort {
+    font-family: "Press Start 2P", sans-serif;
     grid-column: span 2;
   }
 
@@ -72,8 +76,9 @@
     text-decoration: none;
   }
 
-  a:hover {
-    background-color: rba(255, 0, 0, .5);
+/* hover, white text on red overlay */
+  .grid-item p:hover {
+    background-color: rbga(255, 0, 0, .5);
   }
 </style>
 
@@ -105,7 +110,7 @@
       </a>
     </div>
 
-    <div class="grid-item middlesShort">middlesShort</div>
+    <div class="grid-item middlesShort">TOP SECRET</div>
 
     <div class="grid-item nodebot">
       <h3>nodeBot</h3>
@@ -125,8 +130,8 @@
       </a>
     </div>
 
-    <div class="grid-item ar-puzzle">ar puzzle</div>
-    <div class="grid-item ar-puzzle">ar puzzle</div>
-    <div class="grid-item bottomRight">bottomRight</div>
+    <div class="grid-item small">TOP SECRET</div>
+    <div class="grid-item small">TOP SECRET</div>
+    <div class="grid-item bottomRight">TOP SECRET</div>
   </div>
 </section>
