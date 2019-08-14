@@ -5,7 +5,7 @@
   const arrowNav = e => {
     const left = () => document.getElementById("left").classList.toggle('pressed');
     const right = () => document.getElementById("right").classList.toggle('pressed');
-
+    // the classes are applied, but not working
     if (e.key === "ArrowRight") {
       right();
       setTimeout(right, 500);
@@ -35,6 +35,15 @@
 </script>
 
 <style>
+  @keyframes navShrink {
+    from {
+      height: 100vh;
+    }
+    to {
+      height: 3em;
+    }
+  }
+
   nav {
     align-items: center;
     background-color: black;
@@ -45,29 +54,53 @@
     justify-content: center;
     font-weight: 300;
     padding: 1em 0em;
+    /* animation properties */
+    height: 100vh;
+    animation: navShrink 1s 2s forwards;
   }
 
   h1 {
-    font-family: "Press Start 2P", sans-serif;
+    font-family: 'Press Start 2P', cursive;
     font-size: 1.5em;
     margin: 0;
     text-transform: uppercase;
   }
 
   .title {
-    align-items: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 0 1em;
+    margin: 0 .5em;
+  }
+
+  .title.left h1 {
+    text-align: right;
+  }
+
+  .title.right h1 {
+    text-align: left;
+  }
+
+  @keyframes menuAppear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      padding: 0 2em;
+      width: 25%;
+    }
   }
 
   ul {
+    animation: menuAppear 1s 2.5s forwards;
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 0;
-    padding: 0 2em;
+    opacity: 0;
+    padding: 0;
+    width: 0%;
   }
 
   /* clearfix */
@@ -80,7 +113,7 @@
   li {
     display: block;
     float: left;
-    font-family: "Press Start 2P", sans-serif;
+    font-family: 'Press Start 2P', cursive;
     text-transform: uppercase;
   }
 
@@ -97,6 +130,7 @@
     background-color: red;
     display: block;
     bottom: -1px;
+    animation: pop 1s 2.75s forwards;
   }
 
   a {
@@ -106,8 +140,14 @@
   }
 
   @keyframes pop {
+    0% {
+      opacity: 0;
+    }
     50% {
-      transform: scale(1.4) 
+      transform: scale(1.4);
+    }
+    100% {
+      opacity: 1;
     }
   }
 
@@ -118,13 +158,14 @@
   }
 
   .arrow {
-    animation: pop .5s;
+    animation: pop 1s 2.75s forwards;
     height: 4em;
+    opacity: 0;
   }
 
-  .pressed {
-    animation: press .5s;
-  }
+  /* .pressed {
+    transform: scale(0.5);
+  } */
 
 </style>
 
@@ -136,7 +177,7 @@
     alt="an arrow pointing left"
     id="left"
     class="arrow" />
-  <div class="title">
+  <div class="title left">
     <h1>Mark</h1>
     <h1>Web</h1>
   </div>
@@ -153,7 +194,7 @@
       <a class={segment === 'me' ? 'selected' : ''} href="me">me</a>
     </li>
   </ul>
-  <div class="title">
+  <div class="title right">
     <h1>Glimm</h1>
     <h1>Dev</h1>
   </div>

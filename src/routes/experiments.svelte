@@ -21,24 +21,24 @@
   .grid-item {
     align-items: center;
     background-color: black;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 1em;
   }
 
-  .grid-item:hover {
-    color: white;
+  .grid-item:active {
+    color: red;
   }
 
   .grid-item h3 {
     margin: 0;
-  }
-  .grid-item p {
+    /* font-size: ; */
   }
 
   .fivetones {
-    background: center / cover no-repeat url('/fivetones.png');
+    background: center / cover no-repeat url("fivetones.jpg");
     grid-row: span 3;
     grid-column: span 2;
   }
@@ -53,7 +53,7 @@
   }
 
   .foundry {
-    background: center / cover no-repeat url('d&d.png');
+    background: center / cover no-repeat url("d&d.jpg");
     grid-row: span 2;
     grid-column: span 2;
   }
@@ -64,6 +64,7 @@
   }
 
   .nodebot {
+    background: center / cover no-repeat url("raspberry.jpg");
     grid-row: span 2;
   }
 
@@ -76,9 +77,9 @@
     text-decoration: none;
   }
 
-/* hover, white text on red overlay */
+  /* hover, white text on red overlay */
   .grid-item p:hover {
-    background-color: rbga(255, 0, 0, .5);
+    background-color: rbga(255, 0, 0, 0.5);
   }
 </style>
 
@@ -100,12 +101,12 @@
     </div>
 
     <div class="grid-item vegex">
-      <a href="#">
+      <a href="http://www.github.com/glimmbo/vegex">
         <h3>Vegex</h3>
         <p>
-          My bootcamp final project that connects gardeners and small farmers
-          together to trade their produce. Work in progress. Currently migrating
-          from Rails backend to a modern GraphQL API with a Svelte client.
+          My CodeCore final project that aims to connect gardeners and small
+          farmers together to trade their produce. Work in progress. Currently
+          migrating from Rails to a GraphQL API with a Svelte client.
         </p>
       </a>
     </div>
@@ -113,19 +114,21 @@
     <div class="grid-item middlesShort">TOP SECRET</div>
 
     <div class="grid-item nodebot">
-      <h3>nodeBot</h3>
-      <p>
-        I found an unused Rasberry Pi in my roomate's closet. I installed node
-        on it to serve as...something useful I'm sure.
-      </p>
+      <a href="https://github.com/rwaldron/johnny-five">
+        <h3>nodeBot</h3>
+        <p>
+          I installed NodeJS on my Rasberry Pi to tinker with IoT applications
+          using johnnyfive.
+        </p>
+      </a>
     </div>
 
     <div class="grid-item foundry">
       <a href="https://github.com/death-save/fvtt-modules">
         <h3>Foundry VTT</h3>
         <p>
-          I play D&D with 5 friends every Sunday 🤓. We use a new, open-source
-          application that allows the development of custom modules.
+          I play D&D with 5 friends every Sunday 🤓. We use a new, open-sourced,
+          JavaScript application that allows the development of custom modules.
         </p>
       </a>
     </div>

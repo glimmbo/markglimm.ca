@@ -17,7 +17,7 @@
   <Project
     title="C3 Solutions"
     url="https://github.com/c3-solutions"
-    img="/512-cube.png"
+    img="/512-cube.jpg"
     description="A group project spearheaded by myself and members of my cohort, aimed at bringing
           alumni of CodeCore together to build applications for non-profit /
           charitable organizations."
@@ -25,7 +25,7 @@
   <Project
     title="Love is in the Air"
     url="https://liita.markglimm.ca"
-    img="/dance.png"
+    img="/dance.jpg"
     description="Landing page for my aerial photography hobby business."
   />
 

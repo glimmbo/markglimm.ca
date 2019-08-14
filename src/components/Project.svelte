@@ -7,7 +7,7 @@
 
 <style>
   .project {
-    height: 15em;
+    height: 10em;
     list-style: none;
   }
   .text {
