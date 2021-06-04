@@ -65,7 +65,7 @@ export default function Home() {
           <ul>
             <li>
               <h3>University of British Columbia</h3>
-              <p>BA Economics</p>
+              <p>Bachelor of Arts, Economics</p>
             </li>
             <li>
               <h3>CodeCore College</h3>
