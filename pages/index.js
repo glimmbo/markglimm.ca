@@ -19,7 +19,7 @@ export default function Home() {
           <div>
             250-575-4910 Vancouver, BC
             <br />
-            markglimm@gmail.com
+            mark@markglimm.ca
             <br />
             markglimm.ca
           </div>
