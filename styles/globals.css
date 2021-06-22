@@ -13,6 +13,32 @@ a {
   box-sizing: border-box;
 }
 
-@import url('http://fonts.cdnfonts.com/css/now');
-@import url('http://fonts.cdnfonts.com/css/sifonn');
-@import url('http://fonts.cdnfonts.com/css/anonymous-pro');
+ul {
+ list-style: none;
+}
+
+@font-face {
+  font-family: 'Now';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Now'), url('https://fonts.cdnfonts.com/s/18655/Now-Bold.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Sifonn';
+font-style: normal;
+font-weight: 700;
+src: local('Sifonn'), url('https://fonts.cdnfonts.com/s/13897/SIFONN_PRO.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Anonymous Pro';
+font-style: normal;
+font-weight: 400;
+src: local('Anonymous Pro'), url('https://fonts.cdnfonts.com/s/21/Anonymous_Pro.woff') format('woff');
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
